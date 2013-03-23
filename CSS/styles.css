@@ -1,0 +1,62 @@
+/* John Cardiff-Winchell
+VFW 1303
+Project week 4 */
+
+body{
+	background-color: #fff9c7;
+}
+fieldset{
+	background-color: #AA9786;
+	
+}
+
+h1{
+	margin: 10px;
+	border: 1px color solid black;
+	padding: 10px;
+	text-align: center;
+	background-color: #AA9786;
+	font-family: Copperplate Gothic Light, sans-serif;
+	color: navy;
+	text-decoration: underline;
+	
+}
+
+legend{
+	font-family: fantasy;
+	font-size: medium;
+	float: inherit;
+}
+
+ul{
+	list-style-type: none;
+}
+
+div{
+	font-family: monospace;
+	color: maroon;
+	background-color: silver;
+	text-align: left; 
+	
+}
+
+nav{
+	text-align: left;
+
+}
+
+input{
+	background-color: silver;
+	
+	
+}
+
+textarea{
+	background-color: silver;
+	outline-style: groove;
+	outline-color: red;
+}
+
+#error{
+	color: red;
+}
