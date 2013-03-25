@@ -8,9 +8,9 @@ var json = {
 		"condition" : ["Condition:" , "5"],
 		"date" : ["Date:" , "3/25/2013"],
 		"notes" : ["Notes:" , "Brand new. Loaded SS model."],
-	}
-};
+	},
 
+	
 	"Vehicle2": {
 		"newUsed" : ["New or Used:" , "New"],
 		"make" : ["Make:" , "Ford"],
@@ -20,8 +20,8 @@ var json = {
 		"condition" : ["Condition:" , "5"],
 		"date" : ["Date:" , "3/25/2013"],
 		"notes" : ["Notes:" , "Brand new. Great gas mileage."],
-	}
-};
+	},
+
 
 	"Vehicle3": {
 		"newUsed" : ["New or Used:" , "New"],
