@@ -108,8 +108,8 @@ function submitData(key){
 function getData(){
 	toggle("on");
 	if(localStorage.length === 0){
-		alert("Local storage is empty.");
-		
+		alert("Local storage is empty so default data was added.");
+		autoFillData();
 	}
 	var createDiv = document.createElement("div");
 	createDiv.setAttribute("id", "item");
@@ -138,9 +138,19 @@ function getData(){
 		}	
 			editDelete(localStorage.key(i),liLink);		
 	}
-	
-// Create edit and delete links
 }
+//Auto populate local storage
+	function autoFillData(){
+		//json object data required for this to work is stored in the json.js file which is loaded from the html page
+		//Store the json object into local storage.
+		for(var n in json){
+			var id = Math.floor(Math.random()*5551212);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+	}		
+	
+}	
+// Create edit and delete links
+
 function editDelete(key, liLink){
 	var edit = document.createElement("a");
 	edit.href = "#";
@@ -178,7 +188,8 @@ function editItem(){
 		else if(rad[i].value === "Used" && item.newUsed[1] === "Used")		{
 			rad[i].setAttribute("checked", "checked"); 
 		}
-	}	gid("makes").value = item.make[1];
+	}
+	gid("makes").value = item.make[1];
 	gid("models").value = item.model[1];
 	gid("year").value = item.year[1];
 	gid("mileage").value = item.mileage[1];
@@ -290,4 +301,4 @@ submit.addEventListener("click", validate);
 	
 
 
-})
+});
