@@ -128,17 +128,27 @@ function getData(){
 		var object = JSON.parse(value);
 		var subList = document.createElement("ul");
 		createLi.appendChild(subList);
+		getImage(object.make[1], subList);
 		for(var y in object){
-		var createSubLi = document.createElement("li");
-		createLi.appendChild(createSubLi);
-		var SubText = object[y] [0] +" "+ object[y] [1];
-		createSubLi.innerHTML = SubText;
-		createLi.appendChild(liLink);
+			var createSubLi = document.createElement("li");
+			createLi.appendChild(createSubLi);
+			var SubText = object[y] [0] +" "+ object[y] [1];
+			createSubLi.innerHTML = SubText;
+			createLi.appendChild(liLink);
 			
 		}	
 			editDelete(localStorage.key(i),liLink);		
 	}
 }
+// get image for right catagory
+	function getImage(makeImg, subList){
+		var imageLi = document.createElement("li");
+		subList.appendChild(imageLi);
+		var makeImage = document.createElement("img");
+		var setSrc = makeImage.setAttribute("src", "IMG/"+makeImg+".png");
+		imageLi.appendChild(makeImage);
+	}
+	
 //Auto populate local storage
 	function autoFillData(){
 		//json object data required for this to work is stored in the json.js file which is loaded from the html page
